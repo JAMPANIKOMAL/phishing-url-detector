@@ -1,39 +1,54 @@
 # AI-Powered Phishing URL Detector
 
-**Smart India Hackathon (SIH) 2023 Problem Statement**
+This project addresses the SIH1454 problem statement by the National Technical Research Organisation (NTRO) for the Smart India Hackathon (SIH).
 
-This repository contains a solution for SIH 2023 problem statement SIH1454, provided by the National Technical Research Organisation (NTRO).
+## About The Project
 
----
+Phishing attacks are a prevalent and dangerous cyber threat, leading to financial and data losses. This project develops a machine learning system to detect phishing websites based on URL features. By analyzing the lexical and structural characteristics of URLs, the model classifies them as "benign" or "phishing," providing an additional security layer for users.
 
-## Problem Title
+## Tech Stack
 
-**Develop an intelligent AI/ML system to detect phishing domains that mimic genuine websites.**
-
----
-
-## Project Objective
-
-Build a machine learning model to classify URLs as "legitimate" or "phishing". The model is trained on a diverse dataset, learning to spot malicious patterns by analyzing lexical and structural URL features.
-
----
+- **Python**: Core programming language  
+- **Pandas & NumPy**: Data manipulation and numerical operations  
+- **Scikit-learn**: Machine learning model development and evaluation  
+- **Matplotlib & Seaborn**: Data visualization  
+- **Jupyter Notebook**: Interactive development and documentation  
 
 ## Project Structure
 
-The repository is organized for clarity and reproducibility:
+The project is organized into modular Jupyter notebooks:
 
-- **/data**: Raw URL dataset for training and testing.
-- **/models**: Serialized machine learning models.
-- **/notebooks**: Jupyter notebooks documenting the workflow:
-    - `01_data_sourcing_and_exploration.ipynb`: Data loading and exploratory analysis.
-    - `02_feature_engineering_and_preprocessing.ipynb`: Feature extraction and preprocessing.
-    - `03_model_development.ipynb`: Model training and evaluation.
-    - `04_results_and_visualization.ipynb`: Performance visualization and analysis.
-- **requirements.txt**: Python dependencies.
-- **README.md**: Project overview.
+- `01_data_sourcing_and_exploration.ipynb`: Downloads the raw URL dataset and performs exploratory data analysis (EDA).
+- `02_feature_engineering_and_preprocessing.ipynb`: Extracts features from URLs, including length, domain, path, special characters, and suspicious keywords. Prepares and scales data for modeling.
+- `03_model_development.ipynb`: Trains machine learning models such as Logistic Regression, Random Forest, and Support Vector Machines. Evaluates models using various metrics.
+- `04_results_visualization.ipynb`: Visualizes model performance with a confusion matrix and feature importance plot.
 
----
+## Getting Started
 
-## Acknowledgement
+To set up the project locally, follow these steps:
 
-This project was developed with support from Gemini, a large language model by Google, which assisted with dataset generation, workflow design, and documentation.
+### Prerequisites
+
+- Install Anaconda or Miniconda to manage Python environments.
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your_username/phishing-url-detector.git
+    cd phishing-url-detector
+    ```
+2. Create a Conda environment:
+    ```bash
+    conda create --name phishing-env python=3.9
+    conda activate phishing-env
+    ```
+3. Install required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Acknowledgments
+
+- Guidance and assistance provided by Gemini.
+- Dataset sourced from the open-source community.
