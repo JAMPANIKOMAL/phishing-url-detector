@@ -59,7 +59,13 @@ ENV/
 /notebooks/.ipynb_checkpoints/*
 
 # Data files
-/data/
+# Do not ignore the entire data folder
+
+# Ignore large raw CSV files (manual enforcement for >100MB)
+/data/raw/*.csv
+
+# To strictly ignore files over 100MB, use a pre-commit hook (not possible with .gitignore alone)
+# See https://git-scm.com/docs/gitattributes for advanced filtering
 
 # Model files
 /models/
